@@ -3,42 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فوتبال نیوز - سایت شخصی من</title>
+    <title>فوتبال نیوز | اخبار اختصاصی</title>
     <style>
-        body { font-family: 'Tahoma', sans-serif; background-color: #f4f4f4; margin: 0; line-height: 1.6; }
-        
+        /* تنظیمات کلی بدنه سایت */
+        body {
+            font-family: 'Tahoma', sans-serif;
+            background-color: #f0f2f5; /* طوسی خیلی روشن برای پس‌زمینه */
+            color: #333; /* رنگ متن اصلی (خاکستری خیلی تیره) */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
         /* هدر سایت */
-        header { background-color: #1a5276; color: white; padding: 20px; text-align: center; }
-        
-        /* کارت‌های خبر */
-        .container { max-width: 800px; margin: auto; padding: 20px; }
-        .news-card { background: white; margin-bottom: 20px; padding: 20px; border-radius: 10px; border-right: 5px solid #1a5276; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        
-        h2 { color: #1a5276; margin-top: 0; }
-        
-        /* ریسپانسیو برای موبایل */
+        header {
+            background-color: #343a40; /* طوسی تیره و حرفه‌ای */
+            color: #ffffff; /* متن سفید */
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+
+        /* کانتینر اصلی برای محدود کردن عرض محتوا */
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* استایل کارت‌های خبری */
+        .news-card {
+            background-color: #ffffff; /* سفید خالص برای کارت‌ها */
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 12px; /* لبه‌های گرد و نرم */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* سایه بسیار ملایم */
+            border-right: 6px solid #6c757d; /* خط طوسی در سمت راست برای زیبایی */
+            transition: transform 0.3s ease; /* افکت برای وقتی موس روی آن می‌رود */
+        }
+
+        /* افکت جذاب وقتی موس روی خبر می‌رود */
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        .news-card h2 {
+            color: #212529; /* طوسی بسیار تیره برای تیتر خبر */
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .news-card p {
+            color: #555; /* خاکستری برای متن خبر */
+            font-size: 1rem;
+        }
+
+        /* برچسب یا تگ خبر (مثلاً: نقل و انتقالات) */
+        .category-tag {
+            display: inline-block;
+            background-color: #e9ecef; /* طوسی روشن */
+            color: #495057;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+
+        /* فوتر سایت */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* واکنش‌گرا کردن برای موبایل */
         @media (max-width: 600px) {
-            .container { padding: 10px; }
+            header h1 { font-size: 1.8rem; }
+            .news-card { padding: 15px; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>⚽ اخبار داغ فوتبال</h1>
+        <h1>⚽ فوتبال نیوز</h1>
+        <p>آخرین اخبار، نتایج و تحلیل‌های دنیای فوتبال</p>
     </header>
 
     <div class="container">
+        
+        <!-- کارت خبر اول -->
         <div class="news-card">
-            <h2>تیتر خبر اول: پیروزی بزرگ تیم محبوب</h2>
-            <p>اینجا خلاصه خبر اول را می‌نویسید. سایت شما در حال حاضر در کامپیوترتان به صورت زنده قابل مشاهده است.</p>
+            <span class="category-tag">اخبار داغ</span>
+            <h2>تیتر خبر اول: پیروزی در دقیقه نود!</h2>
+            <p>در یک بازی هیجان‌انگیز، تیم میزبان توانست در آخرین لحظات بازی با یک گل پیروز شود و صدر جدول را حفظ کند...</p>
         </div>
 
+        <!-- کارت خبر دوم -->
         <div class="news-card">
-            <h2>تیتر خبر دوم: تحلیل بازی دیشب</h2>
-            <p>این دومین بخش خبری شماست. شما می‌توانید هر تعداد که خواستید از این بخش‌ها اضافه کنید.</p>
+            <span class="category-tag">نقل و انتقالات</span>
+            <h2>تیتر خبر دوم: ستاره جدید در راه است؟</h2>
+            <p>گزارش‌ها حاکی از آن است که باشگاه‌های بزرگ اروپایی در حال رقابت برای جذب بهترین بازیکن فصل هستند...</p>
         </div>
+
+        <!-- کارت خبر سوم (یک نمونه برای اینکه یاد بگیرید چطور اضافه کنید) -->
+        <div class="news-card">
+            <span class="category-tag">تحلیل</span>
+            <h2>تیتر خبر سوم: چرا سیستم دفاعی تغییر کرد؟</h2>
+            <p>در این مطلب به بررسی تغییرات تاکتیکی مربیان در بازی‌های اخیر می‌پردازیم...</p>
+        </div>
+
     </div>
+
+    <footer>
+        <p>ساخته شده توسط شما | © ۲۰۲۶ فوتبال نیوز</p>
+    </footer>
 
 </body>
 </html>
